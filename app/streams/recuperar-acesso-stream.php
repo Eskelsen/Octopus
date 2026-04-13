@@ -13,26 +13,21 @@ $message = '';
 
 $email = post('email');
 
-if ($tc = tc_get()) { # el
+if ($tc = tc_get()) {
     $message = '<div class="alert alert-warning" role="alert">Aguarde um momento para a próxima solicitação.</div>';
 }
 
-if ($rc = rc_get()) { # el
+if ($rc = rc_get()) {
     exit('Solicitação repetida.').
-    extract($rc); // tmp
-	include APP . 'views/blank.php';
-	exit;
 }
 
-$attempts = 1; # tmp função que conta requests rate_limit(n)
+$attempts = 1;
 
-if ($email AND !$tc) { # el
+if ($email AND !$tc) {
 	$data = Data::one('SELECT * FROM nano_users WHERE email=?',[$email]);
 	if (!$data) {
 		$remaining = 4 - $attempts;
 		$message = '<div class="alert alert-danger" role="alert">E-mail inexistente na base de dados. ' . $remaining . ' tentativa(s) restante(s)</div>';
-		// attempt('recovery');
-		// attemptsStatus('recovery');
 	} else {
 		$hash  = sha1(uniqid());
 		$link  = url("acessar/?hash=$hash");
@@ -44,14 +39,14 @@ if ($email AND !$tc) { # el
             $html  = 'Olá, ' . $name . '<br><br>Seu link de acesso é <a href="' . $link . '">' . $link . '</a>';
             $sent = sendMail($email,$name,$title,$html);
 		}
-		tc_set(15); # el
+		tc_set(15);
         if ($sent) {
             $title	='Solicitação recebida!';
             $message = 'Em breve você receberá um link de recuperação em seu e-mail.';
             $_SESSION['counter_hash'] = sha1($hash);
             $_SESSION['time_hash'] = time() + 600;
             $_SESSION['email'] = $email;
-            rc_set(); # el
+            rc_set();
             include APP . 'views/blank.php';
             exit;
         }

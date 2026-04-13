@@ -12,14 +12,11 @@ $email      = post('email');
 $psw        = post('psw');
 $confpsw    = post('confpsw');
 
-if ($rc = rc_get()) { # el
+if ($rc = rc_get()) {
     exit('Solicitação repetida.').
-    extract($rc); // tmp
-	include APP . 'streams/blank.php';
-	exit;
 }
 
-if ($tc = tc_get()) { # el
+if ($tc = tc_get()) {
     $message = '<div class="alert alert-warning" role="alert">Aguarde um momento para a próxima solicitação.</div>';
     return;
 }
@@ -39,8 +36,8 @@ if (!($psw_ok = ($psw===$confpsw))) {
     return;
 }
 
-tc_set(30); # el
-rc_set(); # el
+tc_set(30);
+rc_set();
 
 $name = format_name($name);
 
@@ -73,8 +70,8 @@ include_once APP . 'functions/mail.php';
 
 $firstname = explode(' ', $name)[0];
 $message = 'Olá ' . $firstname . ', receba as nossas boas-vindas à plataforma $app. Esperamos que tenha uma boa experiência.<br><br>Seu link de acesso é: <a href="' . $link . '">' . $link . '</a>';
-// sendMail($email,$firstname,'Boas-vindas :: ' . $app,$message);
-// sendMail('eskelsen@yahoo.com','Eskelsen',$app . ' :: Onboarding',"Conta criada: *#$id*, $name");
+sendMail($email,$firstname,'Boas-vindas :: ' . $app,$message);
+sendMail('eskelsen@yahoo.com','Eskelsen',$app . ' :: Onboarding',"Conta criada: *#$id*, $name");
 
 $title	= 'Solicitação efetuada!';
 $message = 'Confirme seu e-mail para continuar o processo.' . $message;

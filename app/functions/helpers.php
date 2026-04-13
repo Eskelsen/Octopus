@@ -1,7 +1,5 @@
 <?php
 
-# Functions
-
 function vd($in){
 	echo '<pre>';
 	if (func_num_args()==1) {
@@ -216,7 +214,6 @@ function tc_get(){
     return true;
 }
 
-# Cross-Site Request Forgery (CSRF)
 function csrf(){
     return  '<input type="hidden" name="csrf" value="' . $_SESSION['csrf'] . '">' . PHP_EOL;
 }
@@ -225,7 +222,6 @@ function csrf_check(){
     return hash_equals($_SESSION['csrf'], $_POST['csrf'] ?? '');
 }
 
-# HTTP Functions
 function response($msgdata, $code = 200){
 	$response_key = ($code<400) ? 'response' : 'error';
 	$response[$response_key] = $msgdata;
@@ -356,7 +352,6 @@ function request($url, $data = '', $method = 'GET', $type = true){
     return $response;
 }
 
-# JSON Fy Functions
 function json_pretty($in){
 	return json_encode($in, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK);
 }

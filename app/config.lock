@@ -1,6 +1,6 @@
 <?php
 
-# NanoFramework Build Config
+# Nanoframework Build Config
 
 # Environment
 define('APP' , __DIR__ . '/');
@@ -28,14 +28,14 @@ define('DB_USER', '');
 define('DB_PASS', '');
 
 # Emails
-define('NAMEMAIL', 'NanoFramework');
+define('NAMEMAIL', 'Nanoframework');
 define('USERMAIL', 'nano@mfwks.com');
 define('PASSMAIL', 'xxxxxxxxxxxxxx);
 define('HOSTMAIL', 'smtp.hostinger.com');
 
 # Basics
-$app    = 'NanoFramework';
-$system = 'NanoFramework';
+$app    = 'Nanoframework';
+$system = 'Nanoframework';
 $mark   = 'Microframeworks';
 $site   = 'https://microframeworks.com/';
 $footer = '<a href="' . $site . '" target="_blank">' . $mark . ' &copy;</a>';

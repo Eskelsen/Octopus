@@ -1,9 +1,9 @@
-# NanoFramework
+# Nanoframework
 O menor framework PHP
 
 ## Doutrina
 
-O NanoFramework é guiado por três princípios:
+O Nanoframework é guiado por três princípios:
 
 - Crueza — usar o material original
 - Explicitude — tornar o efeito visível
@@ -12,7 +12,7 @@ O NanoFramework é guiado por três princípios:
 ## Instalação
 Clone o repositório
 ```shell
-git clone https://github.com/Eskelsen/NanoFramework.git .
+git clone https://github.com/Eskelsen/Nanoframework.git .
 ```
 Rode o composer
 ```shell

@@ -1,6 +1,6 @@
 <?php
 
-# NanoFramework
+# Nanoframework
 
 define('WEB', __DIR__ . '/');
 
