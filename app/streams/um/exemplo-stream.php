@@ -53,7 +53,7 @@
         <h1>Um exemplo</h1>
         <p>Esta rota web é gerada pela própria estrutura de pastas.</p>
         <p>&nbsp;</p>
-        <p><a href="../exemplos">Voltar</a></p>
+        <p><a href="<?= url('exemplos') ?>">Voltar</a></p>
     </div>
 
 </body>

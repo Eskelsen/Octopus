@@ -55,7 +55,7 @@
         | <a href="registrar">Acesso</a>
         | <a href="redirect">Redirecionamento</a></p>
         <p>&nbsp;</p>
-        <p><a href="/" style="color: #0a0;font-weight: bold">Voltar</a></p>
+        <p><a href="<?= url() ?>" style="color: #0a0;font-weight: bold">Voltar</a></p>
     </div>
 
 </body>

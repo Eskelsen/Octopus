@@ -38,7 +38,7 @@
     <h1><?= $app; ?></h1>
     <p>&nbsp;</p>
     <p>
-      <a href="exemplos" style="color: #0a0">Exemplos</a>
+      <a href="<?= url('exemplos') ?>" style="color: #0a0">Exemplos</a>
     ⇌ <a href="https://github.com/Eskelsen/Nanoframework" style="color: #46B" target="_blank">GitHub</a>
     </p>
     <p>&nbsp;</p>

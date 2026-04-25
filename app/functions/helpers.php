@@ -28,12 +28,12 @@ function mrk(){
 }
 
 function redirect($in = '/'){
-	header('Location: /' . ltrim($in, '/'));
+	header('Location: ' . url($in));
 	exit;
 }
 
 function refresh($in = '/', $time = 3){
-	header("Refresh: $time; /" . ltrim($in, '/'));
+	header("Refresh: $time; " . url($in));
 }
 
 function img($in){
