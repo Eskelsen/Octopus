@@ -31,7 +31,7 @@
   </style>
 </head>
 <body>
-    <a href=""><img class="mb-4" src="<?= img('ups/icon.png'); ?>" alt="" width="120"></a>
+    <a href=""><img class="mb-4" src="<?= img('ups/icon.png'); ?>" alt="" width="172" style="opacity: 0.3;"></a>
     <!-- Chemistry icons created by Freepik - Flaticon in https://www.flaticon.com/free-icons/chemistry -->
     <p>&nbsp;</p>
     <p>&nbsp;</p>
@@ -39,7 +39,7 @@
     <p>&nbsp;</p>
     <p>
       <a href="<?= url('exemplos') ?>" style="color: #0a0">Exemplos</a>
-    ⇌ <span style="color: #46B"><?= $system; ?></span>
+    ⇌ <a href="https://github.com/Eskelsen/Octopus" style="color: #46B" target="_blank">GitHub</a>
     </p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
