@@ -4,7 +4,7 @@
 define('WEB', dirname(__DIR__, 1) . '/');
 
 if (PHP_SAPI!='cli') {
-    exit('O utilitario migrate nao pode ser acessado diretamente' . PHP_EOL);
+    exit('O utilitario Nano nao pode ser acessado diretamente' . PHP_EOL);
 }
 
 # Config & Helpers
@@ -16,7 +16,7 @@ $arg = isset($argv[2]) ? $argv[2] : null;
 $opt = isset($argv[3]) ? $argv[3] : null;
 
 if (is_null($cmd)) {
-    cli("\e[1mOctopus Migrate:\e[0m inclua 'cmds' para ver os comandos");
+    cli("\e[1mNano:\e[0m inclua 'cmds' para ver os comandos");
     return;
 }
 
