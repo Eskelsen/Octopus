@@ -1,9 +1,11 @@
-# Nanoframework
-O menor framework PHP (Smallest PHP framework).
+# Octopus
+Sistema de gerenciamento de esforço baseado em PHP simples.
+
+Este projeto nasceu como fork do Nanoframework, mas agora segue como produto próprio voltado ao registro e acompanhamento de esforço.
 
 ## Doutrina
 
-O Nanoframework é guiado por três princípios:
+O Octopus herda três princípios da base original:
 
 - Crueza — usar o material original
 - Explicitude — tornar o efeito visível
@@ -12,7 +14,7 @@ O Nanoframework é guiado por três princípios:
 ## Instalação
 Clone o repositório
 ```shell
-git clone https://github.com/Eskelsen/Nanoframework.git .
+git clone <repo-do-octopus> .
 ```
 Rode o composer
 ```shell
@@ -27,5 +29,5 @@ cp app/config.lock app/config.php
 ---
 Rode as migrations
 ```shell
-php app/nano mig up
+php app/octopus mig up
 ```

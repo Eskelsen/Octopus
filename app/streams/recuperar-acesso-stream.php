@@ -18,13 +18,13 @@ if ($tc = tc_get()) {
 }
 
 if ($rc = rc_get()) {
-    exit('Solicitação repetida.').
+    exit('Solicitação repetida.');
 }
 
 $attempts = 1;
 
 if ($email AND !$tc) {
-	$data = Data::one('SELECT * FROM nano_users WHERE email=?',[$email]);
+	$data = Data::one('SELECT * FROM octopus_users WHERE email=?',[$email]);
 	if (!$data) {
 		$remaining = 4 - $attempts;
 		$message = '<div class="alert alert-danger" role="alert">E-mail inexistente na base de dados. ' . $remaining . ' tentativa(s) restante(s)</div>';

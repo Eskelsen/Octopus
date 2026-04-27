@@ -2,7 +2,7 @@
 
 # access
 
-$up[] = 'CREATE TABLE nano_access (
+$up[] = 'CREATE TABLE octopus_access (
     id INTEGER PRIMARY KEY,
 
     request_id TEXT NOT NULL,
@@ -15,4 +15,4 @@ $up[] = 'CREATE TABLE nano_access (
     created_at TEXT NOT NULL
 );';
 
-$down[] = 'DROP TABLE IF EXISTS nano_access';
+$down[] = 'DROP TABLE IF EXISTS octopus_access';

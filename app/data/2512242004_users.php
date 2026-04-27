@@ -2,7 +2,7 @@
 
 # users
 
-$up[] = 'CREATE TABLE nano_users (
+$up[] = 'CREATE TABLE octopus_users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
 
     name TEXT NOT NULL,
@@ -15,4 +15,4 @@ $up[] = 'CREATE TABLE nano_users (
     created_at TEXT NOT NULL
 );';
 
-$down[] = 'DROP TABLE IF EXISTS nano_users';
+$down[] = 'DROP TABLE IF EXISTS octopus_users';

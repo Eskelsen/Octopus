@@ -1,4 +1,4 @@
-# Task Template — Nanoframework
+# Task Template — Octopus
 
 ## Objective
 
@@ -15,7 +15,7 @@ Describe clearly what needs to be done.
 
 ## Constraints
 
-* Must follow Nanoframework doctrine
+* Must follow Octopus doctrine
 * Keep solution simple
 * Avoid new abstractions
 

@@ -6,7 +6,7 @@ class Session
 {
     public static function start(): void
     {
-        session_name('nano');
+        session_name('octopus');
 
         session_set_cookie_params([
             'lifetime' => 604800,

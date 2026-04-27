@@ -45,7 +45,7 @@ class Access
             ip(),
             date('Y-m-d H:i:s')
         ];
-        $sql = "INSERT INTO nano_access (request_id,method,path,ip,created_at) VALUES (?,?,?,?,?);";
+        $sql = "INSERT INTO octopus_access (request_id,method,path,ip,created_at) VALUES (?,?,?,?,?);";
         Data::query($sql, $data);
     }
 
@@ -54,19 +54,19 @@ class Access
         if (empty($_REQUEST['rc'])) {
             return false;
         }
-        $sql = "SELECT * FROM nano_requests WHERE request_id = ? LIMIT 1";
+        $sql = "SELECT * FROM octopus_requests WHERE request_id = ? LIMIT 1";
         return Data::one($sql, [$_REQUEST['rc']]);
     }
 
     public static function request_set()
     {
-        $sql = "INSERT INTO nano_requests (request_id, created_at) VALUES (?, datetime('now'))";
+        $sql = "INSERT INTO octopus_requests (request_id, created_at) VALUES (?, datetime('now'))";
         Data::query($sql, [$_REQUEST['rc']]);
     }
 
     public static function overLimit(int $limit = 10, int $seconds = 60): bool
     {
-        $sql = "SELECT COUNT(*) AS c FROM nano_access WHERE ip = ? AND created_at > ?"; 
+        $sql = "SELECT COUNT(*) AS c FROM octopus_access WHERE ip = ? AND created_at > ?"; 
         $since = date('Y-m-d H:i:s',time() - $seconds);
         $res = Data::query($sql, [ip(), $since]);
         return ($res[0]['c'] ?? 0) >= $limit;

@@ -16,7 +16,7 @@ $arg = isset($argv[2]) ? $argv[2] : null;
 $opt = isset($argv[3]) ? $argv[3] : null;
 
 if (is_null($cmd)) {
-    cli("\e[1mMicroframework Migrate:\e[0m inclua 'cmds' para ver os comandos");
+    cli("\e[1mOctopus Migrate:\e[0m inclua 'cmds' para ver os comandos");
     return;
 }
 

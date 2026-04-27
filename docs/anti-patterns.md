@@ -1,4 +1,4 @@
-# Anti-Patterns — Nanoframework
+# Anti-Patterns — Octopus
 
 ## Overengineering
 

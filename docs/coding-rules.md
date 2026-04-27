@@ -1,4 +1,4 @@
-# Coding Rules — Nanoframework
+# Coding Rules — Octopus
 
 ## General
 
@@ -35,6 +35,7 @@
 
 * Keep queries simple
 * Avoid ORM-like abstractions
+* Use `octopus_` table names for application data
 
 ---
 

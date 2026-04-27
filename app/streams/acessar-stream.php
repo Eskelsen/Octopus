@@ -45,7 +45,7 @@ if (!$confirm) {
 
 $email = $_SESSION['email'] ?? null;
 
-$data = Data::one('SELECT * FROM nano_users WHERE email=?',[$email]);
+$data = Data::one('SELECT * FROM octopus_users WHERE email=?',[$email]);
 
 if (!$data) {
 	$title 	 = 'Algo inesperado aconteceu';

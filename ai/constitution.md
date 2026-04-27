@@ -1,12 +1,12 @@
-# AI Constitution — Nanoframework
+# AI Constitution — Octopus
 
 ## Purpose
 
-Guide AI agents to produce code aligned with Nanoframework philosophy.
+Guide AI agents to produce code aligned with Octopus: an effort management system forked from Nanoframework.
 
 ## Core Doctrine
 
-All outputs MUST follow:
+Octopus inherits the Nanoframework doctrine. All outputs MUST follow:
 
 * **Crueza (Rawness)**
   Prefer native PHP features. Avoid abstractions, wrappers, and unnecessary layers.
@@ -25,6 +25,13 @@ All outputs MUST follow:
 * No dependency injection containers
 * No complex routing systems
 * No class hierarchies for simple flows
+
+## Product Direction
+
+* Effort is the central object of the system
+* Prefer clear records of work, time, responsibility, status, and evidence
+* Keep workflows visible in streams instead of hiding them behind generic layers
+* Domain words should be concrete: effort, task, project, person, estimate, log, status
 
 ---
 

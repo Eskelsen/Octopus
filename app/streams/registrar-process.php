@@ -49,7 +49,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     return;
 }
 
-if (Data::one('SELECT * FROM nano_users WHERE email=?',[$email])) {
+if (Data::one('SELECT * FROM octopus_users WHERE email=?',[$email])) {
     error_log("[registrar-stream] Falha na criação de conta via onboarding: $name <$email> [e-mail já cadastrado]");
     $message = '<div class="alert alert-warning" role="alert">E-mail já cadastrado. Faça <a href="login?email=' . $email . '">login</a>.</div>';
     return;

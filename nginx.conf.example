@@ -11,7 +11,7 @@ server {
     listen [::]:443 ssl http2;
     server_name seusite.com;
 
-    root /var/www/nano/public;
+    root /var/www/octopus/public;
     index index.php;
 
     charset utf-8;

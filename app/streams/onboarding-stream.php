@@ -58,7 +58,7 @@ if (!$ok) {
 	exit;
 }
 
-if (Data::one('SELECT * FROM nano_users WHERE email=?',[$email])) {
+if (Data::one('SELECT * FROM octopus_users WHERE email=?',[$email])) {
     error_log("[onboarding] Falha na criação de conta via onboarding: $name <$email> [e-mail já cadastrado]");
     $message = '<div class="alert alert-warning" role="alert">E-mail já cadastrado. Faça <a href="login?email=' . $email . '">login</a>.</div>';
     return;
@@ -71,7 +71,7 @@ $values = [
     'created_at' => $created_at
 ];
 
-$id = Data::insert('nano_users',$values);
+$id = Data::insert('octopus_users',$values);
 
 if (!$id) {
     error_log("[onboarding] Falha na criação de conta via onboarding: $name <$email> [erro desconhecido]");
@@ -79,7 +79,7 @@ if (!$id) {
     return;
 }
 
-$data = Data::one('SELECT * FROM nano_users WHERE email=?',[$email]);
+$data = Data::one('SELECT * FROM octopus_users WHERE email=?',[$email]);
 
 if (!$data) {
 	$title 	 = 'Algo inesperado aconteceu';

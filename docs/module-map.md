@@ -1,4 +1,4 @@
-# Module Map — Nanoframework
+# Module Map — Octopus
 
 ## Entry Point
 
@@ -51,7 +51,7 @@ Examples:
 
 ## Storage
 
-* `nano.sqlite` → default database
+* `octopus.sqlite` → default database
 
 ---
 

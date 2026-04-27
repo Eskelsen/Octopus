@@ -1,6 +1,6 @@
 <?php
 
-# Nanoframework
+# Octopus
 
 define('WEB', __DIR__ . '/');
 

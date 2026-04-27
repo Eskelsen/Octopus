@@ -1,6 +1,6 @@
 {
-    "name": "eskelsen/nanoframework",
-    "description": "Smallest PHP framework",
+    "name": "outworks/octopus",
+    "description": "Effort management system forked from Nanoframework",
     "type": "project",
     "license": "MIT",
     "autoload": {

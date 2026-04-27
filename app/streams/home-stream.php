@@ -39,7 +39,7 @@
     <p>&nbsp;</p>
     <p>
       <a href="<?= url('exemplos') ?>" style="color: #0a0">Exemplos</a>
-    ⇌ <a href="https://github.com/Eskelsen/Nanoframework" style="color: #46B" target="_blank">GitHub</a>
+    ⇌ <span style="color: #46B"><?= $system; ?></span>
     </p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>

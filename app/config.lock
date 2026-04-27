@@ -1,6 +1,6 @@
 <?php
 
-# Nanoframework Build Config
+# Octopus Build Config
 
 # Environment
 define('APP' , __DIR__ . '/');
@@ -28,14 +28,14 @@ define('DB_USER', '');
 define('DB_PASS', '');
 
 # Emails
-define('NAMEMAIL', 'Nanoframework');
-define('USERMAIL', 'nano@mfwks.com');
+define('NAMEMAIL', 'Octopus');
+define('USERMAIL', 'octopus@localhost');
 define('PASSMAIL', 'xxxxxxxxxxxxxx');
 define('HOSTMAIL', 'smtp.hostinger.com');
 
 # Basics
-$app    = 'Nanoframework';
-$system = 'Nanoframework';
-$mark   = 'Microframeworks';
-$site   = 'https://microframeworks.com/';
+$app    = 'Octopus';
+$system = 'Gerenciamento de Esforço';
+$mark   = 'Octopus';
+$site   = SITE;
 $footer = '<a href="' . $site . '" target="_blank">' . $mark . ' &copy;</a>';

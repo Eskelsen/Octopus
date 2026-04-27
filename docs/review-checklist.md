@@ -1,4 +1,4 @@
-# Review Checklist — Nanoframework
+# Review Checklist — Octopus
 
 ## Simplicity
 
