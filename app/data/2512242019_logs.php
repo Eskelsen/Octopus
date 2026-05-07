@@ -2,7 +2,7 @@
 
 # logs
 
-$up[] = 'CREATE TABLE octopus_logs (
+$up[] = 'CREATE TABLE nano_logs (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
 
     user_id INTEGER,
@@ -11,4 +11,4 @@ $up[] = 'CREATE TABLE octopus_logs (
     created_at TEXT NOT NULL
 );';
 
-$down[] = 'DROP TABLE IF EXISTS octopus_logs';
+$down[] = 'DROP TABLE IF EXISTS nano_logs';
